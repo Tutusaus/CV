@@ -5,7 +5,7 @@
 
 
 %------------PACKAGES----------------
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,11pt,dvipsnames]{article}
 
 \usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
 
@@ -44,9 +44,15 @@
 \usepackage{makecell} % provides commands for cell management in tables
 
 \usepackage{multirow} % provides commands for multirow management in tables
+
+\usepackage[most]{tcolorbox}
 %-----------------------------------------
 
 %----------COLORED UNDERLINES-------------------
+
+\definecolor{cvgreen}{HTML}{00b3b3}
+
+
 \makeatletter
 \UL@protected\def\graydotuline{\leavevmode \bgroup     % define a new command \graydotuline that will be ub sed to underline text with gray dotted lines
 	\UL@setULdepth
@@ -108,6 +114,12 @@
 
 
 %--------REDEFINITIONS----------------
+\tcbset{on line, 
+	boxsep=4pt, left=0pt,right=0pt,top=0pt,bottom=0pt,
+	colframe=white,colback=cvgreen,  
+	highlight math style={enhanced}
+}
+
 % redefines the style of the bullet point
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
@@ -118,6 +130,8 @@
 
 %--------CUSTOM COMMANDS--------------
 %\vspace{} defines a vertical space of given size, modifying this in custom commands can help stretch or shrink resume to remove or add content
+
+\newcommand{\espai}{\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}\symbol{32}}
 
 % resumeItem renders a bullet point
 \newcommand{\resumeItem}[1]{
@@ -207,7 +221,7 @@
 	
 	%-----------------DESCRIPTION-------------------
 	\begin{justify}
-		I am a graduate student in Mathematics at Universitat Autònoma de Bar\-ce\-lo\-na. Currently, I am looking to join the Aeronautical and Aerospace Industries. My main interests range from Stochastic processes, applied to Financial Engineering, to Fluid Dynamics and other aspects in Computer Science, Physics and Engineering.
+		I am a graduate student in Mathematics at Universitat Autònoma de Bar\-ce\-lo\-na. My main interests range from Stochastic processes, applied to Financial Engineering, to Fluid Dynamics and other aspects in Computer Science, Physics and Engineering. I am currently looking for a position as Data Analyst, Data Scientist or Mathematical Modeler.
 	\end{justify}
 	
 	%-----------------------------------------------
@@ -220,30 +234,25 @@
 	\resumeQuadHeading{Bachelor's Degree in Mathematics}{September 2018 - July 2024}
 	{Universitat Autònoma de Barcelona}{Cerdanyola, Spain}
 	\resumeHeadingListEnd{}
-	
-	\resumeHeadingListStart{}
-	\resumeQuadHeading{Baccalaureate}{September 2016 - May 2018}
-	{Escola Tecnos}{Terrassa, Spain}
-	\resumeHeadingListEnd{}
 	%---------------------------------------------
 	
 	
 	%-----------EXPERIENCE-----------------------
 	\section{Working Experience}	
 	\resumeHeadingListStart{}
-	\resumeQuadHeading{Private Tutor}{November 2023 - Currently}
+	\resumeQuadHeading{Teacher}{November 2023 - Currently}
 	{ONA Centre}{Barberà del Vallès, Spain}
 	\begin{itemize}[leftmargin=3em, itemsep=0.1em, topsep=2pt]
-		\item \small Mathematics, Physics and Chemistry on a Baccalaureate level.
+		\item \small Mathematics, Physics and Chemistry on a Baccalaureate level. I develop lesson plans, create engaging activities, and assess student progress to ensure they meet their learning objectives.
 	\end{itemize}
 	\resumeHeadingListEnd{}
 	
 	\resumeHeadingListStart{}
-	\resumeQuadHeading{Market Research Analyst}{August 2023 - November 2023}
+	\resumeQuadHeading{Market Research Analyst \tcbox{\color{white}\textbf{IBM SPSS}}\hspace*{1mm} \tcbox{\color{white}\textbf{MS Excel}}\hspace*{1mm} \tcbox{\color{white}\textbf{R}}}{August 2023 - November 2023}
 	{Biotecnal S.A.}{Sant Quirze del Vallès, Spain}
 	\begin{itemize}[leftmargin=3em, itemsep=0.1em, topsep=2pt]
-		\item \small As part of a curricular internship.
 		\item \small Studied consumer behavior, designing and controlling all kinds of products, allowed to respond to the demands of the market in front of consumers, manufacturers and distributors.
+		\item \small Used IBM SPSS as well as MS Excel and R to make inference on data using diferent statistical tests.
 	\end{itemize}
 	\resumeHeadingListEnd{}
 	
@@ -259,24 +268,25 @@
 	%-----------EXPERIENCE-----------------------
 	\section{Activities \& Volunteering}
 	\resumeHeadingListStart{}
-	\resumeQuadHeading{UABTheHack 2024}{May 18 - May 19, 2024}{\textit{by Universitat Autònoma de Barcelona}}{Cerdanyola, Spain}
+	\resumeQuadHeading{UABTheHack 2024 \tcbox{\color{white}\textbf{Python}}\hspace*{1mm} \tcbox{\color{white}\textbf{Problem-solving}}\hspace*{1mm} \tcbox{\color{white}\textbf{Git}}}{May 18 - May 19, 2024}{\textit{by Universitat Autònoma de Barcelona}}{Cerdanyola, Spain}{\espai}{\href{https://github.com/Tutusaus/UABTheHack}{\faGithub \ \graydotuline{Code}}}
 	\begin{itemize}[leftmargin=3em, itemsep=0.1em, topsep=2pt]
-		\item \small Participated on the Caixa d'Enginyers challenge for their upcoming traveling cashier service.
+		\item \small Participated on Caixa d'Enginyers' challenge for their upcoming travelling cashier service.
+		\item \small Their challenge was to create a program, which given some parameters like initial position, time and destinations it would give a route to follow by solving the Travelling Salesman Problem (TSP).
 	\end{itemize}
 	\resumeHeadingListEnd{}
 	
 	\resumeHeadingListStart{}
-	\resumeQuadHeading{HackUPC 2024}{May 3 - May 5, 2024}{\textit{by Universitat Politècnica de Catalunya}}{Barcelona, Spain}
+	\resumeQuadHeading{HackUPC 2024 \tcbox{\color{white}\textbf{C++}}\hspace*{1mm}\tcbox{\color{white}\textbf{AI}}\hspace*{1mm}\tcbox{\color{white}\textbf{Programming}}}{May 3 - May 5, 2024}{\textit{by Universitat Politècnica de Catalunya}}{Barcelona, Spain}{\espai}{\href{https://github.com/Tutusaus/HackUPC2024}{\faGithub \ \graydotuline{Code}}}
 	\begin{itemize}[leftmargin=3em, itemsep=0.1em, topsep=2pt]
 		\item \small Hackathon where different companies such as ESA, Vueling, TravelPerk and others posted different real-life challenges for students to solve.
-		\item \small Gained knowledge on the heuristics of artificial intelligence and the optimization of resources.
+		\item \small Gained knowledge on the heuristics of artificial intelligence and the optimization of time in algorithms.
 	\end{itemize}
 	\resumeHeadingListEnd{}
 	
 	\resumeHeadingListStart{}
-	\resumeQuadHeading{ICIAM Lecture Coordinator}{July 15 - July 19, 2019}{\textit{by Universitat de València}}{València, Spain}
+	\resumeQuadHeading{ICIAM Lecture Coordinator }{July 15 - July 19, 2019}{\textit{by Universitat de València}}{València, Spain}
 	\begin{itemize}[leftmargin=3em, itemsep=0.1em, topsep=2pt]
-		\item \small Responsible for coordinating the interventions of the congressmen who presented their research.
+		\item \small In charge of coordinating the interventions of the congressmen who presented their research applied to different industries.
 	\end{itemize}
 	\resumeHeadingListEnd{}
 	%---------------------------------------------
@@ -348,7 +358,7 @@
 	\resumeHeadingListEnd{}
 	
 	\resumeHeadingListStart{}
-	\resumeSectionTypeOne{Tools and\hspace{0.5cm} Platforms}{Microsoft Excel \ $|$ Microsoft PowerPoint \ $|$ VSCode \ $|$ \ Git  \ $|$ \ Jupyter Notebook \ $|$ \ SageMath \ $|$ \ Arduino}
+	\resumeSectionTypeOne{Tools and\hspace{0.5cm} Platforms}{Microsoft Excel \ $|$ Microsoft PowerPoint \ $|$ VSCode \ $|$ \ Git  \ $|$ \ Jupyter Notebook \ $|$ \ SageMath \ $|$ \ Arduino \ $|$ \ IBM SPSS}
 	\resumeHeadingListEnd{}
 	
 	\resumeHeadingListStart{}
