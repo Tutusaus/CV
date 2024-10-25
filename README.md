@@ -1,4 +1,4 @@
-# My Curriculum Vitae
+# My Curriculum Vitae (CV) - A QUICK GUIDE ON HOW TO DOWNLOAD IT
 
 Welcome to the repository for my professional Curriculum Vitae (CV). This repository includes all the files necessary to view, edit, and compile my CV. It has been created to allow easy sharing, updating, and downloading in a web-accessible format.
 
@@ -9,7 +9,7 @@ Welcome to the repository for my professional Curriculum Vitae (CV). This reposi
 This repository contains my CV, formatted in **LaTeX**. The CV is designed to highlight my professional background, skills, experiences, and academic achievements in a clean and readable layout.
 
 The repository includes:
-- The source files of my CV
+- The source file of my CV
 - Compilation instructions for building the PDF version (if required)
 - A ready-to-download PDF file (for easy access)
 
@@ -19,17 +19,26 @@ The repository includes:
 
 - **README.md** - The file you're reading now, providing an overview and instructions for use.
 - **cv.tex** - The main source file for the CV, formatted for easy customization and updates.
-- **cv.pdf** - Compiled PDF version to read (if not in the main directory).
+- **cv.pdf** - Compiled PDF version to read.
 
 ---
 
-## 🛠️ How to View and Edit
+## 📥 How to Download the CV
 
-### Viewing the PDF Version
-If you're only interested in viewing the CV, simply download the PDF version:
-1. Go to the repository's main page.
-2. Locate the PDF file (`cv.pdf`) in the repository's main directory or `output` folder.
-3. Click on the file and select **Download** to save it locally.
+### Option 1: Direct PDF Download from Releases
+If you only want to download the PDF version of the CV, you can easily do so through the **Releases** section of this repository:
+1. Go to the **Releases** section on the repository's main page.
+2. Locate the release labeled **CV Download**.
+3. In the **Assets** folder, download the `cv.pdf` file.
+
+### Option 2: Access via Personal Webpage
+You can also view a more extensive version of my CV and download the PDF from my personal website:
+1. On the right side of this repository, under the **About** section, there is a link to the CV section of my personal website.
+2. There, you'll find an option to download the PDF as well as a more detailed version of my CV.
+
+---
+
+## 🛠️ Viewing, Editing, and Compiling the Source Files
 
 ### Editing the CV
 If you would like to customize the CV or make updates:
